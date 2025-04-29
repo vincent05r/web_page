@@ -26,7 +26,8 @@ def get_tasks():
 def add_task():
     data = request.get_json()
     tasks = load_tasks()
-    tasks.append(data)
+    #check data security, valid
+    tasks.append(data)  
     save_tasks(tasks)
     return jsonify({"status": "ok"})
 
